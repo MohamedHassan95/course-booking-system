@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+
+    <!--Style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>course booking system</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Mobile Number">
+            <select id="courseName">
+                <option value="">Select Course</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React">React</option>
+                <option value="Python">Python</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Angular">Angular</option>
+            </select>
+            <div class="price">
+                <input onkeyup="getRemaining()" type="number" placeholder="Deposit" id="deposit">
+                <input onkeyup="getRemaining()" type="number" placeholder="Total Cost" id="total-cost">
+                <input type="number" placeholder="Remaining" id="remaining" readonly>
+            </div>
+            <select id="status">
+                    <option value="">Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            
+
+            <button id="submit">ADD</button>
+        </div>
+        <div class="outputs">
+            <div class="search-block">
+                <input type="text" id="search" placeholder="Search">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div id="delete-all">
+
+            </div>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>phone</th>
+                    <th>course</th>
+                    <th>deposit</th>
+                    <th>total</th>
+                    <th>remaining</th>
+                    <th>status</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
